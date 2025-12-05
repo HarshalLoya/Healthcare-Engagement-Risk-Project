@@ -1,0 +1,5 @@
+\set ON_ERROR_STOP on
+
+\copy users FROM '/workspace/data/users.csv' WITH (FORMAT csv, HEADER true);
+
+\copy events(user_id, event_type, "timestamp", device_type, device_os_version) FROM '/workspace/data/events.csv' WITH (FORMAT csv, HEADER true);
